@@ -1,0 +1,933 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@0,6..96;1,6..96&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+/*------------------------------------------------------SEC1------------------------------------------------------*/
+
+.sec1{
+    margin: auto;
+    padding: 0px;
+    background-color: #2a3138;
+    background-image: url(img/img-1.png);
+    background-position: right bottom;
+    background-repeat: no-repeat; 
+    background-size: contain;
+    
+}
+
+.spacing{
+    padding: 75px;
+}
+
+.sec1div{
+    margin: auto;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+
+.sec1divin1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+} 
+
+.sec1divin1 img{
+    max-width: 100%;
+    width: 200px;
+} 
+
+.sec1divin1 h1{
+    line-height: 1.2em;
+    font-weight: 400;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 55px;
+    color: #fff;
+} 
+
+
+.btn{
+    font-family: 'Bodoni Moda', serif;
+    color: #fff;
+    background: linear-gradient(125deg, rgba(215,182,98,1) 0%, rgba(185,153,72,1) 100%);
+    border-radius: 0px;
+    transition : 0.5s;
+    align-items: center;
+    padding: 20px 40px;
+    display: inline-block;
+    }
+    
+    .btn:hover{
+    color: #fff;
+    background-color: #a7893d;
+    padding: 20px 50px;
+}
+
+
+/*------------------------------------------------------SEC1-END------------------------------------------------------*/
+
+
+/*------------------------------------------------------SEC2------------------------------------------------------*/
+
+.sec2{
+    margin: auto;
+    padding: 50px  25px;
+    background-color: #fff
+    
+}
+
+.sec2div{
+    margin: auto;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.sec2divin {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sec2divin img {
+    max-width: 100%;
+    width: 350px;
+}
+
+.sec2divin2 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.sec2divin2 h1{
+    color: #ab8a35;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 35px;
+    line-height: 1.2em;
+}
+
+.sec2divin2 p{
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.4em;
+}
+
+
+
+/*------------------------------------------------------SEC2-END------------------------------------------------------*/
+
+
+/*------------------------------------------------------SEC3------------------------------------------------------*/
+
+.sec3{
+    margin: auto;
+    padding: 75px 25px;
+    background-color: #f4f4f4;
+    padding-bottom: 0;
+    
+}
+
+.sec3div{
+    margin: auto;
+    max-width: 1100px;
+}
+
+.sec3div h1{
+    color: #ab8a35;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 35px;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.sec3div p{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.4em;
+}
+
+.sec3divin{
+    display: grid;
+    grid-template-columns: 55% 45%;
+}
+
+.sec3divin1-benefits{
+    margin-left: 80px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 13px 15px -16px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.sec3divin1-benefits img{
+    max-width: 100%;
+    width: 100px;
+    margin-left: -80px;
+}
+
+.sec3divin1-benefits h3{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4em;
+    padding-left: 20px;
+}
+
+.sec3divin2{
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.sec3divin2 img{
+    max-width: 100%;
+}
+
+.secbutton1{
+    margin: auto;
+    text-align: center;
+    margin-top: -35px;
+}
+
+
+
+
+/*------------------------------------------------------SEC3-END------------------------------------------------------*/
+
+/*------------------------------------------------------SEC4------------------------------------------------------*/
+
+.sec4{
+    margin: auto;
+    padding: 100px  25px;
+    background-color: #2a3138
+    
+}
+
+.sec4div {
+    display: flex;
+    margin: auto;
+    max-width: 1100px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sec4 h1{
+    color: #fff;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 35px;
+    line-height: 1.2em;
+    text-align: center;
+    letter-spacing: 0.03rem;
+}
+
+.sec4 p{
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.4em;
+    text-align: center;
+}
+
+.comp{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.comp img{
+    margin-top: -95px;
+    max-width: 100%;
+    width: 120px;
+    border-radius: 350px;
+}
+
+.comp h1{
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #ab8a35;
+    letter-spacing: -0.03em;
+}
+
+.comp p{
+    font-weight: 200;
+    font-size: 17px;
+    color: #000;
+    letter-spacing: -0.03em;
+    line-height: 1.1em;
+}
+
+.comp-box {
+    padding: 20px;
+    text-align: center;
+}
+
+.comp-boxdiv{
+    flex-direction: column;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 13px 15px -16px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+/*------------------------------------------------------SEC4-END------------------------------------------------------*/
+
+/*------------------------------------------------------SEC5------------------------------------------------------*/
+
+.sec5{
+    margin: auto;
+    padding: 75px 25px;
+    background-color: #f4f4f4;
+}
+
+.sec5div{
+    margin: auto;
+    max-width: 1100px;
+}
+
+
+.sec5 h1{
+    color: #ab8a35;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 35px;
+    line-height: 1.2em;
+    text-align: center;
+    letter-spacing: 0.03rem;
+}
+
+.sec5 p{
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.4em;
+    text-align: center;
+}
+
+.sec5divin{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sec5divin1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.sec5divin1{
+    background-color: #fff;
+    padding: 30px;
+    margin: 20px;
+}
+
+.sec5divin1 h1{
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.sec5divin1 p{
+    font-size: 17px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.1;
+}
+
+.sec5divin1 img{
+    max-width: 100%;
+    max-width: 150px;
+    border-radius: 20px;
+}
+
+
+/*------------------------------------------------------SEC5-END------------------------------------------------------*/
+
+/*------------------------------------------------------SEC6------------------------------------------------------*/
+
+.sec6{
+    margin: auto;
+    padding: 75px 25px;
+    background-color: #ffffff;
+}
+
+.sec6div{
+    margin: auto;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.sec6 h1{
+    color: #ab8a35;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 35px;
+    line-height: 1.2em;
+    text-align: center;
+    letter-spacing: 0.03rem;
+}
+
+.sec6 p{
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.4em;
+}
+
+.sec6divin{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sec6divin1{
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 30px;
+    margin: 20px;
+}
+
+
+.sec6divin1 p{
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.1;
+}
+
+.sec6divin1 img{
+    max-width: 120px;
+    padding: 10px;
+}
+
+
+/*------------------------------------------------------SEC6-END------------------------------------------------------*/
+
+/*------------------------------------------------------SEC7------------------------------------------------------*/
+
+.sec7divin1{
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+}
+
+.sec7divin1 img{
+    max-width: 80px;
+    padding: 10px;
+    opacity: 0.7;
+}
+
+.sec7divin1 p{
+    padding: 10px;
+}
+
+/*------------------------------------------------------SEC7-END------------------------------------------------------*/
+
+/*------------------------------------------------------SEC8------------------------------------------------------*/
+
+
+.sec8{
+    margin: auto;
+    padding: 75px 25px;
+    background-color: #f4f4f4;
+}
+
+.sec8div{
+    margin: auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.sec8 h1{
+    color: #ab8a35;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 35px;
+    line-height: 1.2em;
+    text-align: center;
+    letter-spacing: 0.03rem;
+}
+
+.sec8 p{
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.4em;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    margin: 5px;
+    border-radius: 0;
+    background-color: #e4e4e4;
+    color: #444;
+    cursor: pointer;
+    padding: 20px;
+    max-width: 100%;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    border-radius: 0;
+    background-color: #ab8a35;
+    color: #fff;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    text-align: left;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 0;
+  }
+
+/*------------------------------------------------------SEC8-END------------------------------------------------------*/
+
+/*------------------------------------------------------SEC9------------------------------------------------------*/
+.sec9{
+    margin: auto;
+    padding: 75px 25px;
+    background-color: #ffffff;
+}
+
+.sec9div{
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.sec9 h1{
+    color: #ab8a35;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 35px;
+    line-height: 1.2em;
+    text-align: center;
+    letter-spacing: 0.03rem;
+}
+
+.sec9divin{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.boxprice{
+    border: 1px rgb(45, 45, 45) solid;
+}
+
+.sec9 .topbar{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.sec9 .porcent{
+    background-color: #191919;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    justify-content: center;
+    color: #fff;
+}
+
+.sec9 .porcent h3{
+    font-size: 12px;
+    line-height: 1.1em;
+    font-weight: 400;
+}
+
+.sec9 .meses{
+    padding: 10px;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec9 .meses h2{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.boxprice {
+    margin: 10px;
+}
+
+.boxprice img{
+    max-width: 100%;
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+}
+
+.boxprice h4{
+    font-size: 13px;
+    text-align: center;
+}
+
+.boxpricein{
+    padding: 20px;
+}
+
+.precotabela{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.precotabela .lado1{
+    font-size: 11px;
+    color: #5d5d5d;
+}
+
+.precotabela .lado2{
+    font-size: 13px;
+}
+
+.precototal{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.precototal .lado3{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.precototal .lado4{
+    display: flex;
+    font-size: 16px;
+    font-weight: 400;
+    align-items: center;
+    margin: 10px 0;
+}
+
+
+.btn-price{
+    font-family: 'Bodoni Moda', serif;
+    color: #fff;
+    background: linear-gradient(125deg, rgba(215,182,98,1) 0%, rgba(185,153,72,1) 100%);
+    border-radius: 0px;
+    transition : 0.5s;
+    align-items: center;
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .btn-price:hover{
+    color: #fff;
+    background: linear-gradient(125deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+}
+
+.boxprice h3{
+    font-size: 10px;
+    font-weight: 300;
+    text-align: center;
+}
+
+/*------------------------------------------------------SEC9-END------------------------------------------------------*/
+
+/*------------------------------------------------------SEC10------------------------------------------------------*/
+
+.sec10{
+    margin: auto;
+    padding: 50px 25px;
+    background-color: #191919;
+}
+
+.sec10div{
+    margin: auto;
+    max-width: 1080px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.box3{
+    padding: 20px;
+}
+
+.box3 h3{
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.box3 a{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.7em;
+}
+
+.box3 img{
+    max-width: 100%;
+    width: 250px;
+}
+
+/*------------------------------------------------------SEC10-END------------------------------------------------------*/
+
+/*------------------------------------------------------SEC11------------------------------------------------------*/
+
+.sec11{
+    margin: auto;
+    padding: 25px;
+    background-color: #000;
+}
+
+.sec11div{
+    margin: auto;
+    max-width: 1080px;
+}
+
+.sec11div h1{
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.406);
+}
+
+.sec11div p{
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+    color: #afafaf7b;
+}
+
+/*------------------------------------------------------SEC11-END------------------------------------------------------*/
+
+
+/*------------------------------------------------------SLIDE------------------------------------------------------*/
+
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.wrapper{
+  display: flex;
+  max-width: 1200px;
+  position: relative;
+}
+.wrapper i{
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  color: #343F4F;
+  cursor: pointer;
+  font-size: 1.15rem;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active{
+  transform: translateY(-50%) scale(0.9);
+}
+.wrapper i:hover{
+  background: #f2f2f2;
+}
+.wrapper i:first-child{
+  left: -22px;
+  display: none;
+}
+.wrapper i:last-child{
+  right: -22px;
+}
+.wrapper .carousel{
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.carousel.dragging{
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.carousel.dragging img{
+  pointer-events: none;
+}
+.carousel img{
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: calc(100% / 2);
+}
+.carousel img:first-child{
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .carousel img{
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .carousel img{
+    width: 100%;
+  }
+}
+
+/*------------------------------------------------------SLIDE-END------------------------------------------------------*/
+
+/*------------------------------------------------------MOBILE------------------------------------------------------*/
+
+@media screen and (max-width: 900px) {
+    .sec2div{
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+    .sec3divin2{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .sec3divin1-benefits{
+        margin: 5px 10px 20px 80px;
+    }
+
+    .sec3divin1-benefits h3{
+        font-size: 14px;
+    }
+
+    .sec3divin2 img{
+        max-width: 100%;
+        width: 275px;
+    }
+
+    .sec9divin{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+  }
+
+
+
+
+
+
+  @media screen and (max-width: 670px) {
+
+    .sec1div{
+        display: flex;
+    }
+
+    .spacing{
+        padding: 30px;
+    }
+
+    .sec1divin1{
+        height: 100vh;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .sec1divin1 h1{
+        text-align: center;
+    }
+
+    .sec2div{
+        display: block;
+    }
+
+    .sec2divin img{
+        width: 200px;
+    }
+
+    .sec2divin2 h1{
+        text-align: center;
+    }
+    .sec2divin2 p{
+        text-align: center;
+    }
+
+    .sec2divin2{
+        align-items: center;
+    }
+
+    .sec3divin{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .sec3divin2 img{
+        display: none;
+    }
+
+    .comp{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .comp-box{
+    margin-top: 20px;
+    }
+
+    .sec6divin{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .sec6divin1{
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .sec10div{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    }
+
+/*------------------------------------------------------MOBILE-END------------------------------------------------------*/
