@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@0,6..96;1,6..96&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display&display=swap');
 
 *{
     padding: 0;
@@ -52,14 +52,15 @@ a{
 
 .sec1divin1 h1{
     line-height: 1.2em;
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 55px;
     color: #fff;
+    font-weight: 400;
 } 
 
 
 .btn{
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Playfair Display', serif;
     color: #fff;
     background: linear-gradient(125deg, rgba(215,182,98,1) 0%, rgba(185,153,72,1) 100%);
     border-radius: 0px;
@@ -67,6 +68,7 @@ a{
     align-items: center;
     padding: 20px 40px;
     display: inline-block;
+    font-weight: 400;
     }
     
     .btn:hover{
@@ -118,9 +120,10 @@ a{
 
 .sec2divin2 h1{
     color: #ab8a35;
-    font-family: 'Bodoni Moda', serif;
-    font-size: 35px;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
     line-height: 1.2em;
+    font-weight: 400;
 }
 
 .sec2divin2 p{
@@ -151,10 +154,11 @@ a{
 
 .sec3div h1{
     color: #ab8a35;
-    font-family: 'Bodoni Moda', serif;
-    font-size: 35px;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
     line-height: 1.2em;
     text-align: center;
+    font-weight: 400;
 }
 
 .sec3div p{
@@ -232,11 +236,12 @@ a{
 
 .sec4 h1{
     color: #fff;
-    font-family: 'Bodoni Moda', serif;
-    font-size: 35px;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
     line-height: 1.2em;
     text-align: center;
     letter-spacing: 0.03rem;
+    font-weight: 400;
 }
 
 .sec4 p{
@@ -308,8 +313,9 @@ a{
 
 .sec5 h1{
     color: #ab8a35;
-    font-family: 'Bodoni Moda', serif;
-    font-size: 35px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 40px;
     line-height: 1.2em;
     text-align: center;
     letter-spacing: 0.03rem;
@@ -381,8 +387,9 @@ a{
 
 .sec6 h1{
     color: #ab8a35;
-    font-family: 'Bodoni Moda', serif;
-    font-size: 35px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 40px;
     line-height: 1.2em;
     text-align: center;
     letter-spacing: 0.03rem;
@@ -465,8 +472,9 @@ a{
 
 .sec8 h1{
     color: #ab8a35;
-    font-family: 'Bodoni Moda', serif;
-    font-size: 35px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 40px;
     line-height: 1.2em;
     text-align: center;
     letter-spacing: 0.03rem;
@@ -537,8 +545,9 @@ a{
 
 .sec9 h1{
     color: #ab8a35;
-    font-family: 'Bodoni Moda', serif;
-    font-size: 35px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 40px;
     line-height: 1.2em;
     text-align: center;
     letter-spacing: 0.03rem;
@@ -642,7 +651,8 @@ a{
 
 
 .btn-price{
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
     color: #fff;
     background: linear-gradient(125deg, rgba(215,182,98,1) 0%, rgba(185,153,72,1) 100%);
     border-radius: 0px;
