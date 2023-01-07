@@ -17,7 +17,7 @@ a{
 .sec1{
     margin: auto;
     padding: 0px;
-    background-color: #2a3138;
+    background-color: #111417;
     background-image: url(img/img-1.png);
     background-position: right bottom;
     background-repeat: no-repeat; 
@@ -665,6 +665,52 @@ a{
     font-weight: 300;
     text-align: center;
 }
+
+
+
+.por-pote {
+    display: flex;
+    font-size: 10px;
+    font-weight: 500;
+    background-color: #b69952;
+    color: #fff;
+    /* width: max-content; */
+    width: 70px;
+    height: 70px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 100%;
+    /* vertical-align: -webkit-baseline-middle; */
+    position: relative;
+    right: -120px;
+    top: -131px;
+    z-index: 999999;
+    transform-style: preserve-3d;
+    /* transform: rotate(10deg) translateZ(50px); */
+    animation: float-price 1s ease-in-out infinite;
+    line-height: 0.6em;
+    box-shadow: 18px 9px 26px -19px #ab8a35;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: -70px;
+}
+
+
+
+    
+@keyframes float-price {
+    0% {
+      transform:scale(1) translateZ(50px) rotate(10deg) translate(10px, 10px);
+    }
+  
+    50% {
+      transform: scale(1.15) translateZ(50px) rotate(10deg) translate(10px, 10px);;
+    }
+  
+    100% {
+      transform: scale(1) translateZ(50px) rotate(10deg) translate(10px, 10px);
+    }
+  }
 
 /*------------------------------------------------------SEC9-END------------------------------------------------------*/
 
