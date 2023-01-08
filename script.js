@@ -1,73 +1,80 @@
-const carousel = document.querySelector(".carousel"),
-firstImg = carousel.querySelectorAll("img")[0],
-arrowIcons = document.querySelectorAll(".wrapper i");
+const cardWrapper = document.querySelector('.card-wrapper')
+const cardWrapperChildren = Array.from(cardWrapper.children)
+const widthToScroll = cardWrapper.children[0].offsetWidth
+const arrowPrev = document.querySelector('.arrow.prev')
+const arrowNext = document.querySelector('.arrow.next')
+const cardBounding = cardWrapper.getBoundingClientRect()
+const column = Math.floor(cardWrapper.offsetWidth / (widthToScroll + 24))
+let currScroll = 0
+let initPos = 0
+let clicked = false
 
-let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
+cardWrapperChildren.slice(-column).reverse().forEach(item=> {
+  cardWrapper.insertAdjacentHTML('afterbegin', item.outerHTML)
+})
 
-const showHideIcons = () => {
-    // showing and hiding prev/next icon according to carousel scroll left value
-    let scrollWidth = carousel.scrollWidth - carousel.clientWidth; // getting max scrollable width
-    arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
-    arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
+cardWrapperChildren.slice(0, column).forEach(item=> {
+  cardWrapper.insertAdjacentHTML('beforeend', item.outerHTML)
+})
+
+const cardImageAndLink = cardWrapper.querySelectorAll('img, a')
+cardImageAndLink.forEach(item=> {
+  item.setAttribute('draggable', false)
+})
+
+cardWrapper.classList.add('no-smooth')
+cardWrapper.scrollLeft = cardWrapper.offsetWidth
+cardWrapper.classList.remove('no-smooth')
+
+arrowPrev.onclick = function() {
+  cardWrapper.scrollLeft -= widthToScroll
 }
 
-arrowIcons.forEach(icon => {
-    icon.addEventListener("click", () => {
-        let firstImgWidth = firstImg.clientWidth + 14; // getting first img width & adding 14 margin value
-        // if clicked icon is left, reduce width value from the carousel scroll left else add to it
-        carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
-        setTimeout(() => showHideIcons(), 60); // calling showHideIcons after 60ms
-    });
-});
-
-const autoSlide = () => {
-    // if there is no image left to scroll then return from here
-    if(carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 || carousel.scrollLeft <= 0) return;
-
-    positionDiff = Math.abs(positionDiff); // making positionDiff value to positive
-    let firstImgWidth = firstImg.clientWidth + 14;
-    // getting difference value that needs to add or reduce from carousel left to take middle img center
-    let valDifference = firstImgWidth - positionDiff;
-
-    if(carousel.scrollLeft > prevScrollLeft) { // if user is scrolling to the right
-        return carousel.scrollLeft += positionDiff > firstImgWidth / 2 ? valDifference : -positionDiff;
-    }
-    // if user is scrolling to the left
-    carousel.scrollLeft -= positionDiff > firstImgWidth / 2 ? valDifference : -positionDiff;
+arrowNext.onclick = function() {
+  cardWrapper.scrollLeft += widthToScroll
 }
 
-const dragStart = (e) => {
-    // updatating global variables value on mouse down event
-    isDragStart = true;
-    prevPageX = e.pageX || e.touches[0].pageX;
-    prevScrollLeft = carousel.scrollLeft;
+cardWrapper.onmousedown = function(e) {
+  cardWrapper.classList.add('grab')
+  initPos = e.clientX - cardBounding.left
+  currScroll = cardWrapper.scrollLeft
+  clicked = true
 }
 
-const dragging = (e) => {
-    // scrolling images/carousel to left according to mouse pointer
-    if(!isDragStart) return;
-    e.preventDefault();
-    isDragging = true;
-    carousel.classList.add("dragging");
-    positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
-    carousel.scrollLeft = prevScrollLeft - positionDiff;
-    showHideIcons();
+cardWrapper.onmousemove = function(e) {
+  if(clicked) {
+    const xPos = e.clientX - cardBounding.left
+    cardWrapper.scrollLeft = currScroll + -(xPos - initPos)
+  }
 }
 
-const dragStop = () => {
-    isDragStart = false;
-    carousel.classList.remove("dragging");
+cardWrapper.onmouseup = mouseUpAndLeave
+cardWrapper.onmouseleave = mouseUpAndLeave
 
-    if(!isDragging) return;
-    isDragging = false;
-    autoSlide();
+function mouseUpAndLeave() {
+  cardWrapper.classList.remove('grab')
+  clicked = false
 }
 
-carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("touchstart", dragStart);
+let autoScroll
 
-document.addEventListener("mousemove", dragging);
-carousel.addEventListener("touchmove", dragging);
+cardWrapper.onscroll = function() {
+  if(cardWrapper.scrollLeft === 0) {
+    cardWrapper.classList.add('no-smooth')
+    cardWrapper.scrollLeft = cardWrapper.scrollWidth - (2 * cardWrapper.offsetWidth)
+    cardWrapper.classList.remove('no-smooth')
+  } else if(cardWrapper.scrollLeft === cardWrapper.scrollWidth - cardWrapper.offsetWidth) {
+    cardWrapper.classList.add('no-smooth')
+    cardWrapper.scrollLeft = cardWrapper.offsetWidth
+    cardWrapper.classList.remove('no-smooth')
+  }
 
-document.addEventListener("mouseup", dragStop);
-carousel.addEventListener("touchend", dragStop);
+  if(autoScroll) {
+    clearTimeout(autoScroll)
+  }
+
+  autoScroll = setTimeout(()=> {
+    cardWrapper.classList.remove('no-smooth')
+    cardWrapper.scrollLeft += widthToScroll
+  }, 4000)
+}

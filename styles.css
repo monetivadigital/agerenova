@@ -308,6 +308,9 @@ a{
 .sec5div{
     margin: auto;
     max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -795,77 +798,102 @@ a{
 
 /*------------------------------------------------------SLIDE------------------------------------------------------*/
 
-/* Import Google font - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
-.wrapper{
-  display: flex;
-  max-width: 1200px;
-  position: relative;
-}
-.wrapper i{
-  top: 50%;
-  height: 44px;
-  width: 44px;
-  color: #343F4F;
-  cursor: pointer;
-  font-size: 1.15rem;
-  position: absolute;
-  text-align: center;
-  line-height: 44px;
-  background: #fff;
-  border-radius: 50%;
-  transform: translateY(-50%);
-  transition: transform 0.1s linear;
-}
-.wrapper i:active{
-  transform: translateY(-50%) scale(0.9);
-}
-.wrapper i:hover{
-  background: #f2f2f2;
-}
-.wrapper i:first-child{
-  left: -22px;
-  display: none;
-}
-.wrapper i:last-child{
-  right: -22px;
-}
-.wrapper .carousel{
-  font-size: 0px;
-  cursor: pointer;
-  overflow: hidden;
-  white-space: nowrap;
-  scroll-behavior: smooth;
-}
-.carousel.dragging{
-  cursor: grab;
-  scroll-behavior: auto;
-}
-.carousel.dragging img{
-  pointer-events: none;
-}
-.carousel img{
-  height: 100%;
-  object-fit: cover;
-  user-select: none;
-  margin-left: 14px;
-  width: calc(100% / 2);
-}
-.carousel img:first-child{
-  margin-left: 0px;
-}
-
-@media screen and (max-width: 900px) {
-  .carousel img{
-    width: calc(100% / 2);
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .carousel img{
+/* start: Slider */
+.wrapper {
+    position: relative;
+    max-width: 940px;
     width: 100%;
-  }
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    background-color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+}
+.arrow:hover {
+    background-color: #f3f3f3;
+}
+.arrow.prev {
+    left: 0;
+}
+.arrow.next {
+    right: 0;
+}
+.card-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 2) - 12px);
+    overflow-x: auto;
+    padding: 24px;
+    gap: 24px;
+    cursor: grab;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 24px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.card-wrapper::-webkit-scrollbar {
+    display: none;
+}
+.card-wrapper.grab {
+    cursor: grabbing;
+    user-select: none;
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+.card-wrapper.no-smooth {
+    scroll-behavior: auto;
+}
+.card-item {
+    scroll-snap-align: start;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.card-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+    color: #222;
+}
+.card-title:hover {
+    color: #006aff;
+}
+.card-description {
+    color: #888;
+}
+/* end: Slider */
+
+
+
+@media screen and (max-width: 575px) {
+    .arrow {
+        display: none;
+    }
+    .card-wrapper {
+        margin-left: 0px;
+        width: 100%;
+        grid-auto-columns: 100%;
+    }
 }
 
 /*------------------------------------------------------SLIDE-END------------------------------------------------------*/
